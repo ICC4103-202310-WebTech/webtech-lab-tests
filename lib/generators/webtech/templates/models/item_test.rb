@@ -34,4 +34,16 @@ class ItemTest < ActiveSupport::TestCase
   test 'should validate presence of callories at db level' do
     assert_equal false, ActiveRecord::Base.connection.column_exists?(:items, :callories, null: false)
   end
+
+  test 'item belongs to a restaurant' do
+    item = Item.find_by name: 'Hamburguesa'
+    assert_respond_to item, :restaurant
+    assert_instance_of Restaurant, item.restaurant
+  end
+
+  test 'item belongs to a dish' do
+    item = Item.find_by name: 'Hamburguesa'
+    assert_respond_to item, :dish
+    assert_instance_of Dish, item.dish
+  end
 end

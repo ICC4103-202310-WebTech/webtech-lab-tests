@@ -14,4 +14,9 @@ class DishTest < ActiveSupport::TestCase
   test 'should validate presence of name at db level' do
     assert_equal false, ActiveRecord::Base.connection.column_exists?(:dishes, :name, null: false)
   end
+
+  test 'should have many items' do
+    dish = Dish.find_by name: 'Dessert'
+    assert_respond_to dish, :items
+  end
 end
