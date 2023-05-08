@@ -24,4 +24,9 @@ class RestaurantTest < ActiveSupport::TestCase
   test 'should validate presence of address at db level' do
     assert_equal false, ActiveRecord::Base.connection.column_exists?(:restaurants, :address, null: false)
   end
+
+  test 'should have many items' do
+    restaurant = Restaurant.find_by name: 'NcDonalds'
+    assert_respond_to restaurant, :items
+  end
 end
