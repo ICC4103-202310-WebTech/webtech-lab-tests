@@ -1,4 +1,4 @@
-require 'test_helpers'
+require 'test_helper'
 
 class ItemTest < ActiveSupport::TestCase
     

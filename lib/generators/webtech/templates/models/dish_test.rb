@@ -1,9 +1,9 @@
-require 'test_helpers'
+require 'test_helper'
 
 class DishTest < ActiveSupport::TestCase
     test 'should load fixtures correctly' do
         dish = Dish.find_by name: 'Dessert'
-        asert_equal 'Dessert', dish.name
+        assert_equal 'Dessert', dish.name
     end
 
     test 'should validate presence of name at model level' do
