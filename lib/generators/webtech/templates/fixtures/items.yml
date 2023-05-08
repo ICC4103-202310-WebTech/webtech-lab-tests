@@ -1,1 +1,37 @@
 ---
+i01:
+  name: Pan
+  price: 1000
+  callories: 150
+i02:
+  name: Hamburguesa
+  price: 1500
+  callories: 200
+i03:
+  name: Papa Frita
+  price: 1000
+  callories: 300
+i04:
+  name: Lechuga
+  price: 200
+  callories: 20
+i05:
+  name: Tomate
+  price: 100
+  callories: 50
+i06:
+  name: Queso
+  price: 300
+  callories: 200
+i07:
+  name: Cebolla
+  price: 1000
+  callories: 100
+i08:
+  name: Frutilla
+  price: 1000
+  callories: 200
+i09:
+  name: Helado
+  price: 1000
+  callories: 200
